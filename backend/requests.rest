@@ -1,0 +1,47 @@
+GET http://localhost:5000/patient
+
+###
+POST http://localhost:5000/patient/add
+Content-Type: application/json
+
+{
+  "name": "Johny Doe",
+  "age": 30,
+  "bloodGroup": "A+",
+  "gender": "Male",
+  "contact": "1231567890",
+  "email": "johnydoe@example.com",
+  "image": "https://example.com/image.jpg",
+  "medicalHistory": "",
+  "allergies": ["Pollen", "Penicillin"]
+}
+###
+POST http://localhost:5000/patient/647515b18b8acba8f4736b0e/records/add
+Content-Type: application/json
+
+{
+  "recordNumber": "ABC123",
+  "bloodPressure": "120/80",
+  "heartRate": "70",
+  "temperature": "98.6",
+  "respiratoryRate": "16",
+  "medication": "Aspirin",
+  "observation": "No significant findings"
+}
+###
+
+PUT http://localhost:5000/patient/update/647515b18b8acba8f4736b0e
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "age": 30,
+  "bloodGroup": "A+",
+  "gender": "Male",
+  "contact": "1234567890",
+  "email": "johndoe@example.com",
+  "image": "https://example.com/image.jpg",
+  "medicalHistory": "None",
+  "allergies": ["Pollen", "Penicillin"]
+}
+
